@@ -25,7 +25,7 @@ if [ "$updates_check" != "$(date +%Y-%m-%d)" ]; then
 		echo
 		if [[ $REPLY =~ ^[Tt]$ ]]; then
 			sudo pacman -Syu
-			sudo yay -Syu
+			yay -Syu
 			~/Scripts/reset_settings.sh
 		fi
 	fi

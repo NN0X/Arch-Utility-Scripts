@@ -19,7 +19,7 @@ if [ $updates_count -gt 0 ]; then
 	echo
 	if [[ $REPLY =~ ^[Tt]$ ]]; then
 		sudo pacman -Syu
-		sudo yay -Syu
+		yay -Syu
 		~/Scripts/reset_settings.sh
 	fi
 fi
