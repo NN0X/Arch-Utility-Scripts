@@ -5,8 +5,8 @@ else
 	updates_check=""
 fi
 
-sudo pacman -Sy
 if [ "$updates_check" != "$(date +%Y-%m-%d)" ]; then
+	sudo pacman -Sy
 	updates=$(yay -Qu)
 	echo $(date +%Y-%m-%d) > ~/.config/last_checkupdates
 	updates_count=$(echo "$updates" | grep -c .)
