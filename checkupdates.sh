@@ -1,5 +1,5 @@
 #!/bin/bash
-
+sudo pacman -Sy
 updates=$(yay -Qu)
 echo $(date +%Y-%m-%d) > ~/.config/last_checkupdates
 updates_count=$(echo "$updates" | grep -c .)
@@ -20,6 +20,6 @@ if [ $updates_count -gt 0 ]; then
 	if [[ $REPLY =~ ^[Tt]$ ]]; then
 		sudo pacman -Syu
 		yay -Syu
-		~/Scripts/reset_settings.sh
+		/home/nox/Scripts/reset_settings.sh
 	fi
 fi
