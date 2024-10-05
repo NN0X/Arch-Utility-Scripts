@@ -1,5 +1,5 @@
 #!/bin/bash
-sudo pacman -Sy
+yay -Sy
 updates=$(yay -Qu)
 echo $(date +%Y-%m-%d) > ~/.config/last_checkupdates
 updates_count=$(echo "$updates" | grep -c .)
