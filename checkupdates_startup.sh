@@ -20,7 +20,7 @@ if [ "$updates_check" != "$(date +%Y-%m-%d)" ]; then
 		if [[ $REPLY =~ ^[Yy]$ ]]; then
 			echo "$updates"
 		fi
-		read -p "Would you like to update? [T/n] " -r
+		read -p "Would you like to update? [Y/n] " -r
 		echo
 		if [[ $REPLY =~ ^[Yy]$ ]]; then
 			sudo pacman -Syu
