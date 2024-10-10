@@ -4,7 +4,6 @@ if [ -f /home/nox/.config/last_checkupdates ]; then
 else
 	updates_check=""
 fi
-
 if [ "$updates_check" != "$(date +%Y-%m-%d)" ]; then
 	yay -Sy
 	updates=$(yay -Qu)
