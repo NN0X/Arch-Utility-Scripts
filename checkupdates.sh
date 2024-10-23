@@ -1,5 +1,4 @@
 #!/bin/bash
-
 updates=$(yay -Qu)
 echo $(date +%Y-%m-%d) > ~/.config/last_checkupdates
 updates_count=$(echo "$updates" | grep -c .)
