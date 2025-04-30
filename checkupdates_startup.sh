@@ -1,13 +1,13 @@
 #!/bin/bash
-if [ -f /home/nox/.config/last_checkupdates ]; then
-	updates_check=$(cat /home/nox/.config/last_checkupdates)
+if [ -f $HOME/.config/last_checkupdates ]; then
+	updates_check=$(cat $HOME/.config/last_checkupdates)
 else
 	updates_check=""
 fi
 if [ "$updates_check" != "$(date +%Y-%m-%d)" ]; then
 	yay -Sy
 	updates=$(yay -Qu)
-	echo $(date +%Y-%m-%d) > /home/nox/.config/last_checkupdates
+	echo $(date +%Y-%m-%d) > $HOME/.config/last_checkupdates
 	updates_count=$(echo "$updates" | grep -c .)
 	if [ $updates_count -gt 0 ]; then
 		if [ $updates_count -eq 1 ]; then
@@ -26,7 +26,7 @@ if [ "$updates_check" != "$(date +%Y-%m-%d)" ]; then
 		if [[ $REPLY =~ ^[Yy]$ ]]; then
 			sudo pacman -Syu
 			yay -Syu
-			/home/nox/Scripts/reset_settings.sh
+			$HOME/Scripts/reset_settings.sh
 		fi
 	fi
 fi
