@@ -1,2 +1,2 @@
 #!/bin/bash
-~/Git/PasswordManager/build/main
+~/Git/Password/PasswordManager/build/main
