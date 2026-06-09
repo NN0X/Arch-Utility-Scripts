@@ -1,3 +1,2 @@
-sudo pacman -Scc --noconfirm
-sudo pacman -Rns $(pacman -Qtdq)
-sudo paccache -r
+pacman -Qtdq | xargs -r sudo pacman -Rns --noconfirm
+yay -Scc --noconfirm
